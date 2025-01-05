@@ -1,0 +1,9 @@
+@misc{REPO313,
+    author = "Yuan, Longhui and Xie, Binhui and Li, Shuang",
+    archiveprefix = "arXiv",
+    eprint = "2303.13899",
+    primaryclass = "cs.CV",
+    title = "{Robust Test-Time Adaptation in Dynamic Scenarios}",
+    url = "https://arxiv.org/abs/2303.13899",
+    year = "2023"
+}
