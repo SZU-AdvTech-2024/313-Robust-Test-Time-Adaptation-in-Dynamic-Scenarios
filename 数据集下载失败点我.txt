@@ -1,0 +1,3 @@
+## 注意，如果数据集下载失败，请按照README.md中的网址手动下载，
+将数据集CIFAR10文件名字改为Standard.pt，放在目录ckpt/cifar10/corruptions中；
+将数据集CIFAR100文件名字改为Hendrycks2020AugMix_ResNeXt.pt，放在目录ckpt/cifar100/corruptions中。

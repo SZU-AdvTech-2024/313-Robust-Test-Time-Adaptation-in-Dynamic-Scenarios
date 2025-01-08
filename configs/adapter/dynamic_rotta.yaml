@@ -1,0 +1,31 @@
+TEST:
+  BATCH_SIZE: 64
+
+OPTIM:
+  METHOD: Adam
+  STEPS: 1
+  BETA: 0.9
+  LR: 1e-3
+  WD: 0.
+
+INPUT:
+  SIZE: (32, 32)
+
+ADAPTER:
+  NAME: dynamic_rotta  # 指定为 DynamicMemorySizeRoTTA
+  DynamicMemorySizeRoTTA:
+    NU: 0.001
+    MEMORY_SIZE: 64          # 初始内存大小
+    UPDATE_FREQUENCY: 64
+    LAMBDA_T: 1.0
+    LAMBDA_U: 1.0
+    ALPHA: 0.05
+    NUM_RECENT: 5            # 最近批次的数量
+    ACCURACY_THRESHOLD_UP: 1.1   # 准确率上升阈值（比例）
+    ACCURACY_THRESHOLD_DOWN: 0.95  # 准确率下降阈值（比例）
+    MIN_MEMORY_SIZE: 64      # 内存最小值
+    MAX_MEMORY_SIZE: 512     # 内存最大值
+
+LOADER:
+  SAMPLER:
+    TYPE: "temporal"
